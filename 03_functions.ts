@@ -8,7 +8,7 @@ function add (x: number, y: number, z?: number): number {
     }
 }
 
-let result = add(1, 2)
+let addResult = add(1, 2)
 
 // 函数表达式
 const add2 = function (x: number, y: number, z?: number): number {
