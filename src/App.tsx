@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+
+import Main from './pages/main';
+import Ref from './pages/ref';
+import Effect from './pages/effect';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <div className="header-nav">
+          <NavLink to="/" exact>首页</NavLink>
+          <NavLink to="/effect">useEffect</NavLink>
+          <NavLink to="/ref">useRef</NavLink>
+        </div>
+        <Route path="/" exact><Main /></Route>
+        <Route path="/ref" exact><Ref /></Route>
+        <Route path="/effect" exact><Effect /></Route>
+      </div>
+    </BrowserRouter>
   );
 }
 
