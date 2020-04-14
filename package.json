@@ -38,10 +38,6 @@
     ]
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "node-sass": "^4.13.1"
-=======
     "@types/react-router-dom": "^5.1.4"
->>>>>>> hook-stu
   }
 }
